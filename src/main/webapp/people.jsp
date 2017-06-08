@@ -20,7 +20,7 @@
 	
 	</jsp:attribute>
 	<jsp:body>
-		<button class="btn" data-bind="click:getData">Get Data</button><br/>
+		<button class="btn" data-bind="click:getData">Get Data</button><br/><br/>
 		<table class="table table-bordered table-striped table-hover">
                     <thead>
                         <tr>
@@ -55,10 +55,11 @@
                         <button class="btn btn-success" data-bind="click:prev" > PREV</button>
                     </div>
                     <div class="col-sm-1">
-                        <input class="form-control" data-bind="value:page" /> 
+                        <input class="form-control" data-bind="value:page" />
                     </div>
-                   
-
+                    <div class="col-sm-1" style="line-height: 34px;">
+                         of <span data-bind="text: pagesCount"></span>
+                    </div>
                     <div class="col-sm-1">
                         <button class="btn btn-success pull-right" data-bind="click:next">NEXT</button>
                     </div>

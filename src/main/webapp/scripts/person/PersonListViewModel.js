@@ -83,5 +83,17 @@ function PersonListViewModel(){
             }
         });
 	}
-	
+	self.getData();
+
+	self.pagesCount = ko.observable(0);
+	self.getPagesCount = function(){
+		$.ajax({
+			url: "/samplerestapp/rest/people/pagesCount",
+			type: "GET",
+			success: function (data) {
+				self.pagesCount(Math.round((data/10)-0.5)+1);
+			}
+		});
+	}
+	self.getPagesCount();
 }

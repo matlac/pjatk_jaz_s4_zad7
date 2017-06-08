@@ -25,7 +25,7 @@
 				<li><a href="people.jsp">Show all</a></li>
 			</ul>
 		</div>
-		<div id="content" class="container">
+		<div id="content" style="margin-top: 80px;" class="container">
 			<jsp:doBody/>
 		</div>
 		
